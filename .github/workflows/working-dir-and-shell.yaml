@@ -1,0 +1,24 @@
+name: Working Dirs and Shells
+on: [push]
+jobs:
+  display-wd-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Displaying the current working directory nad list files
+        run: |
+          pwd
+          ls -la
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+
+  display-wd-info-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Displaying the current working directory nad list files
+        run: |
+          pwd
+          ls -la
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
